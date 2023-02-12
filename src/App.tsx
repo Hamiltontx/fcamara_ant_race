@@ -7,6 +7,7 @@ import {
   useColorScheme,
   Image,
   useWindowDimensions,
+  Platform,
 } from 'react-native';
 import AntsProvider from './context/AntsProvider';
 import Controls from './components/Controls'
@@ -21,7 +22,7 @@ function App(): JSX.Element {
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
       />
-      <Image source={require('./assets/bg_race.png')} resizeMode="stretch" style={[styles.image, { height: height }]} />
+      <Image source={require('./assets/bg_race.png')} resizeMode="stretch" style={[styles.image]} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={[styles.backgroundStyle, { marginTop: 60 }]}>
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   },
   image: {
     position: 'absolute',
-    top: 60
+    top: Platform.OS === 'ios' ? 60 : 0
   }
 });
 

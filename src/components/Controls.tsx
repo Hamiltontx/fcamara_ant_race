@@ -5,6 +5,8 @@ import {
 import { gql, useLazyQuery } from '@apollo/client'
 import Button from '../components/Button'
 import { AntsContext } from '../context/AntsProvider'
+import { Ant } from '../utils/types'
+import { generateAntWinLikelihoodCalculator } from '../utils/functions'
 
 const ANTS_QUERY = gql`
   query {
@@ -16,28 +18,6 @@ const ANTS_QUERY = gql`
     }
   }
 `
-
-//function as-is
-function generateAntWinLikelihoodCalculator() {
-    const delay = 7000 + Math.random() * 7000;
-    const likelihoodOfAntWinning = Math.random();
-
-    //@ts-ignore  -- *** callback: must be defnied for typescript
-    return (callback) => {
-        setTimeout(() => {
-            callback(likelihoodOfAntWinning);
-        }, delay);
-    };
-}
-
-type Ant = {
-    name: string,
-    length: number,
-    color: string,
-    weight: number,
-    position: number,
-    status: string,
-}
 
 const Controls = () => {
     const [callAnts, { loading, data }] = useLazyQuery(ANTS_QUERY);

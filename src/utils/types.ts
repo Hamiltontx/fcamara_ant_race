@@ -4,4 +4,5 @@ export type Ant = {
     color: string,
     weight: number,
     position: number,
+    status: string,
 }

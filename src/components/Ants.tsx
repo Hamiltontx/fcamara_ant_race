@@ -7,15 +7,7 @@ import {
 import { AntsContext } from '../context/AntsProvider'
 import { SvgCss } from 'react-native-svg'
 import { antSvg } from '../utils/svgs'
-
-type Ant = {
-    name: string,
-    length: number,
-    color: string,
-    weight: number,
-    position: number,
-    status: string,
-}
+import { Ant } from '../utils/types'
 
 const Ants = () => {
     const { antPositions } = useContext(AntsContext);
