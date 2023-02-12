@@ -36,3 +36,8 @@
 
     -Android
     npx react-native run-android
+
+
+#Shot
+
+![alt text](https://github.com/Hamiltontx/fcamara_ant_race/blob/main/shot.png)
