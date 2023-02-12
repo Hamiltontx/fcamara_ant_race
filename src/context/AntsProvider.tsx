@@ -12,7 +12,6 @@ export const AntsProvider = ({ children }: { children: JSX.Element }) => {
         const total = count + 1
         setCount(total);
         if (total == 5) setControl(false)
-        console.log('control', count)
     }, [race])
 
     useEffect(() => {

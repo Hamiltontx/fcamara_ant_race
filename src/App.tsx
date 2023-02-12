@@ -23,19 +23,14 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
       />
       <Image source={require('./assets/bg_race.png')} resizeMode="stretch" style={[styles.image]} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={[styles.backgroundStyle, { marginTop: 60 }]}>
-
-        <AntsProvider>
-          <>
-            <Controls />
-            <Ants />
-          </>
-        </AntsProvider>
-
-      </ScrollView>
-
+      <AntsProvider>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={[styles.backgroundStyle, { marginTop: 60 }]}>
+          <Controls />
+          <Ants />
+        </ScrollView>
+      </AntsProvider>
     </SafeAreaView>
   );
 }

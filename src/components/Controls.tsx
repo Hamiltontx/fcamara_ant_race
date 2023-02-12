@@ -45,8 +45,6 @@ const Controls = () => {
         setAntPositions(showData)
     }, [data])
 
-    console.log(control)
-
     return <>
         <Button
             onPress={callAnts}
