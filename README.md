@@ -12,7 +12,8 @@
     -SVG
     https://github.com/software-mansion/react-native-svg
 
-    -Lottie (not used => dont have time)
+        -Lottie (not used => dont have time)
+    https://github.com/lottie-react-native/lottie-react-native
 
 
 #Resources
@@ -25,6 +26,9 @@
 
     -ant
     https://upload.wikimedia.org/wikipedia/commons/0/02/Ant_%28Jacob_Eckert%29.svg
+
+    - motion ant (not used => dont have time)
+    https://lottiefiles.com/9801-running-ant
 
 
 #Instructions (from a MAC)
